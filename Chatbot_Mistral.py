@@ -11,7 +11,7 @@ def extract_text_from_pdf(file_path):
     return text
 
 # Extract text from the PDF and split it into sentences
-text = extract_text_from_pdf('DW.pdf')
+text = extract_text_from_pdf('file.pdf')
 
 ### Split (Clustering Adjacent Sentences)
 import numpy as np
@@ -99,7 +99,7 @@ llm = HuggingFaceHub(huggingfacehub_api_token=os.environ['HUGGINGFACEHUB_API_TOK
                     )
 
 ### Retrieve and Generate
-question = "Cosa fare se il display mostra iC4 o iC5?"
+question = "question"
 
 # Retrieve
 retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 6})
